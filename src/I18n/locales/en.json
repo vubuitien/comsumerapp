@@ -7,7 +7,7 @@
     "title_footer": "Shopping made Profitable  ",
   },
   "login": {
-    "forgot_your_password": "Forgot password? ",
+    "forgot_your_password": "Forgot Password? ",
     "or": "OR",
     "google": "Google",
     "facebook": "Facebook",
@@ -33,6 +33,22 @@
     "user_name": "User Name",
     "password": "Password",
     "email": "Email",
-    "confirm_password": "Confirm Password"
+    "confirm_password": "Confirm Password",
+    "title_header": "Sign Up",
+    "norder_text_header": "Join us and",
+    "bold_text_header": "START",
+    "bold_text_header2": "EARNING",
+    "title_footer": "Are you a Merchant ? ",
+    "click": "Click",
+    "here": "Here!",
+    "seller": "Seller!",
+    "title_box_signup": "Create Account!  ",
+    "next": "Next",
+    "step": "Step ",
+    "create_account": {
+      "title_header": "Sign Up",
+      "bold_text_header": "YOUR",
+      "bold_text_header2": "PREFERENCES",
+    }
   }
 }

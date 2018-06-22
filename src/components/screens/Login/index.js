@@ -30,6 +30,7 @@ class Login extends Component {
     this.onSignupPress = this.onSignupPress.bind(this);
     this.renderLogin = this.renderLogin.bind(this);
     this.renderCreateAccount = this.renderCreateAccount.bind(this);
+    this.renderMerchant = this.renderMerchant.bind(this);
     this.onPress = this.onPress.bind(this);
   }
   //
@@ -56,6 +57,28 @@ class Login extends Component {
 
   onPress() {
     this.props.navigation.navigate('SignUp');
+  }
+
+  renderMerchant() {
+    return (
+      <View style={styles.merchant}>
+        <View style={styles.leftMerchant}>
+          <Text style={styles.textMerchant}>{I18n.t('login.title_footer')}</Text>
+          <TouchableOpacity onPress={this.props.onPress} style={styles.buttonClick}>
+            <Icon name={'arrow-right-bold'} style={styles.iconMerchant} />
+            <Text style={styles.click}>{I18n.t('login.click')}</Text>
+            <Text style={styles.here}>{I18n.t('login.here')}!</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.rightMerchant}>
+          <Text style={styles.hi}>{I18n.t('login.seller')}</Text>
+          <Image
+            source={require('../../../../assets/images/pig.svg')}
+            style={styles.imageSvg}
+          />
+        </View>
+      </View>
+    );
   }
 
   renderCreateAccount() {
@@ -129,23 +152,7 @@ class Login extends Component {
               </View>
               {this.renderLogin()}
               {this.renderCreateAccount()}
-              <View style={styles.merchant}>
-                <View style={styles.leftMerchant}>
-                  <Text style={styles.textMerchant}>{I18n.t('login.title_footer')}</Text>
-                  <TouchableOpacity onPress={this.props.onPress} style={styles.buttonClick}>
-                    <Icon name={'arrow-right-bold'} style={styles.iconMerchant} />
-                    <Text style={styles.click}>{I18n.t('login.click')}</Text>
-                    <Text style={styles.here}>{I18n.t('login.here')}!</Text>
-                  </TouchableOpacity>
-                </View>
-                <View style={styles.rightMerchant}>
-                  <Text style={styles.hi}>{I18n.t('login.seller')}</Text>
-                  <Image
-                    source={require('../../../../assets/images/pig.svg')}
-                    style={styles.imageSvg}
-                  />
-                </View>
-              </View>
+              {this.renderMerchant()}
             </ScrollView>
           </View>
     );

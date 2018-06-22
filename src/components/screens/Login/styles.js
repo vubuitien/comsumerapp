@@ -3,6 +3,7 @@ import {
     Dimensions
 } from 'react-native';
 import Fonts from '../../../constants/fonts';
+
 const window = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
@@ -60,7 +61,7 @@ export const styles = StyleSheet.create({
     },
     or: {
       left: '45%',
-      bottom: 15,
+      bottom: 13,
       alignItems: 'center',
       width: 40,
       height: 30,
@@ -70,6 +71,7 @@ export const styles = StyleSheet.create({
       color: '#fff',
       position: 'absolute',
       fontSize: 16,
+      fontFamily: Fonts.ubuntuRegular
     },
     formLogin: {
       marginBottom: 5,
@@ -85,7 +87,7 @@ export const styles = StyleSheet.create({
     },
     titleHeader: {
       textAlign: 'center',
-      fontSize: 36,
+      fontSize: 48,
       color: '#fff',
       fontFamily: Fonts.lobsterRegular,
       marginTop: 30,
