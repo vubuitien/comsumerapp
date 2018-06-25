@@ -26,7 +26,7 @@ class GetMore extends Component {
   }
 
   onNextStep() {
-    this.props.navigation.navigate('FirstStep');
+    this.props.navigation.navigate('Welcome');
   }
 
   _renderShare() {

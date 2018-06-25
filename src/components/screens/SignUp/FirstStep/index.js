@@ -33,6 +33,7 @@ class FirstStep extends Component {
     this._renderBirthday = this._renderBirthday.bind(this);
     this._renderGender = this._renderGender.bind(this);
     this._renderModalCategory = this._renderModalCategory.bind(this);
+    this.onNext = this.onNext.bind(this);
     this.state = {
       loading: false,
       wait: false,
@@ -42,7 +43,9 @@ class FirstStep extends Component {
       male_female: true,
     };
   }
-
+  onNext() {
+    this.props.navigation.navigate('ThanksSignUp');
+  }
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps === this.props && nextState === this.state) {
       return false;
@@ -75,21 +78,21 @@ class FirstStep extends Component {
   }
 
   _onNextStep = async () => {
-  // TODO: transfer list of category ids to next screen
-  if (this.state.dataCheck.length != 0) {
-    await this.props.navigation.navigate('SignUp', {
-      dataAllCategory: this.state.dataCheckId
-    });
-    arrayDataId = [];
-    arrayData = [];
-  } else {
-   (
-      this.setState({ wait: true })
-    );
+    // TODO: transfer list of category ids to next screen
+    if (this.state.dataCheck.length != 0) {
+      await this.props.navigation.navigate('ThanksSignUp', {
+        dataAllCategory: this.state.dataCheckId
+      });
+      arrayDataId = [];
+      arrayData = [];
+    } else {
+      (
+        this.setState({ wait: true })
+      );
+    }
   }
-}
 
-  _getDataId=async () => {
+  _getDataId = async () => {
     mangId = await [];
     for (let i = 0; i < this.state.dataCheck.length; i++) {
       mangId.push(this.state.dataCheck[i].id);
@@ -111,7 +114,7 @@ class FirstStep extends Component {
   }
 
 
-  _setStateCheck= () => {
+  _setStateCheck = () => {
     this.setState({ dataCheck: arrayData });
   }
 
@@ -128,27 +131,27 @@ class FirstStep extends Component {
               <Text style={styles.textSecond}>{I18n.t('signup.create_account.modal.text2')}</Text>
             </View>
             <CategoryQuery>
-            {
-              (queryResult, loading) =>
+              {
+                (queryResult, loading) =>
                   (<ScrollView style={styles.scrollCategory}>
                     <ListViewWrapper
                       navigation={this.props.navigation}
                       data={queryResult.getAllCategories}
                       row={(data) => <Row
-                            {...data}
+                        {...data}
                       />}
                       addCheck={this._addCheck}
                       delCheck={this._delCheck}
                       dataCheck={this.state.dataCheck}
                     />
                   </ScrollView>)
-            }
+              }
             </CategoryQuery>
             <View style={styles.footerBox}>
               <TouchableOpacity
                 onPress={() => {
-                this.setState({ loading: false });
-                this._delArray();
+                  this.setState({ loading: false });
+                  this._delArray();
                 }}
               >
                 <Text style={styles.clickBox}>{I18n.t('signup.create_account.modal.text3')}</Text>
@@ -301,7 +304,7 @@ class FirstStep extends Component {
               iconColor={'#ff8b03'}
               title={I18n.t('signup.create_account.button.continue')}
               style={styles.buttonNext}
-              onPress={this.onNextStep}
+              onPress={this.onNext}
             />
           </View>
         </ScrollView>

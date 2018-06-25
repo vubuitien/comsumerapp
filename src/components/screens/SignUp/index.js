@@ -30,7 +30,7 @@ class SignUp extends Component {
   }
 
   onNextStep() {
-    this.props.navigation.navigate('GetMore');
+    this.props.navigation.navigate('FirstStep');
   }
 
   _renderHeader() {
