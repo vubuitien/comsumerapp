@@ -8,6 +8,7 @@ import {
 // import { Mutation } from 'react-apollo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import LinearGradient from 'react-native-linear-gradient';
 import Image from 'react-native-remote-svg';
 import { styles } from './styles';
 import {
@@ -127,7 +128,10 @@ class Login extends Component {
 
   render() {
     return (
-          <View style={styles.container}>
+          <LinearGradient
+            colors={['#8f0000', '#ff4a00', '#8f0000']}
+            style={styles.container}
+          >
             <ScrollView>
               <Text style={styles.titleHeader}>{I18n.t('login.sign_in')}</Text>
               <View style={styles.loginNetwork}>
@@ -154,7 +158,7 @@ class Login extends Component {
               {this.renderCreateAccount()}
               {this.renderMerchant()}
             </ScrollView>
-          </View>
+          </LinearGradient>
     );
   }
 }

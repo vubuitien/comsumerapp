@@ -6,6 +6,7 @@ import BoxAdd from './BoxAdd';
 import BoxParameter from './BoxParameter';
 import BoxIconCreate from './BoxIconCreate';
 import BoxIcon from './BoxIcon';
+import BoxArrow from './BoxArrow';
 
 export { BoxTextInput, BoxCloseDeal, BoxInformation, BoxListOffer, BoxAdd, BoxParameter,
-    BoxIconCreate, BoxIcon };
+    BoxIconCreate, BoxIcon, BoxArrow };

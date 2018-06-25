@@ -47,7 +47,7 @@ import { TextPassword, TextAccount, TextInformation, TextTitle,
 import { Wait } from './Modal';
 
 import { BoxTextInput, BoxInformation, BoxCloseDeal, BoxListOffer, BoxAdd,
-    BoxParameter, BoxIconCreate, BoxIcon } from './Box';
+    BoxParameter, BoxIconCreate, BoxIcon, BoxArrow } from './Box';
 
 export {
 	BottomBar, StyledTextInput, TextInputData, TextInputAccount, TopBar, Menu, ListViewWrapper,
@@ -60,7 +60,7 @@ export {
 	FormButton, CreateFormButton, DeleteFormButton, GreenFormButton, SaveFormButton,
   ButtonCreate, ButtonNext, ButtonBack, BottomCreateSignUp, ButtonIcon, TextInformation,
   UpdateFormButton, RowButton, DeleteRowButton, EditRowButton, IconTextButton, ButtonSignin,
-  TextPassword, TextAccount, ButtonSelect, BottomBarButton, DeleteBottomBarButton,
+  TextPassword, TextAccount, ButtonSelect, BottomBarButton, DeleteBottomBarButton, BoxArrow,
   DeleteRowButtonTextIcon, ShowActionDotsButton, Wait, BoxTextInput, BoxInformation,
   BoxCloseDeal, TextDescription, BoxListOffer, TextInputSearch, TextEdit, BoxAdd, TextParameter,
   BoxParameter, TextDetails, TextTitle, TextHeader, BoxIconCreate, TextNormal, TextBold, BoxIcon

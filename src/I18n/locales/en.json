@@ -45,10 +45,61 @@
     "title_box_signup": "Create Account!  ",
     "next": "Next",
     "step": "Step ",
+    "day": "DD",
+    "month": "MM",
+    "year": "YYYY",
+    "text": " / ",
     "create_account": {
       "title_header": "Sign Up",
       "bold_text_header": "YOUR",
       "bold_text_header2": "PREFERENCES",
+      "head": {
+        "text1": "SELECT",
+        "text2": "THE CATEGORY OR CATEGORIES",
+        "text3": "that best match the products/services you looking for.",
+        "text4": "If you don't find the perfect match use the closest one.",
+        "title": "More Benefits?",
+        "content": "I'm interested in ...",
+        "birthday_title": "Birthday Benefits",
+        "birthday_content": "Date of Birth",
+        "gender_title": "Products & Services",
+        "gender_content": "For Gender"
+      },
+      "category":{
+        "text1": "Improve Your",
+        "text2": "Search!  ",
+        "create_btn": "Add ",
+        "name_btn": "Category! ",
+      },
+      "modal":{
+        "text1": "Choose Categories",
+        "text2": "Your company sells",
+        "text3": "CANCER",
+        "text4": "OKAY"
+      },
+      "button":{
+        "late": "Later",
+        "remember": "Remember",
+        "continue": "Continue ",
+      },
+      "get_more": {
+        "push": "Push ",
+        "me": "ME! ",
+        "share": "Share ",
+        "content_share": "with your contacts and",
+        "get": "GET ",
+        "number": "100 ",
+        "dealcoins": "DealCoins! ",
+        "title_get_first_coind": "PER EACH REFFERRAL",
+        "title_get_second_coind": "THAT SIGNS UP",
+        "header_title": "GetMore",
+        "title_header_1": "RESERVATIONS",
+        "title_header_2": "DEALCOINS",
+        "or": "OR ",
+        "title_or": "it's up to you! ",
+        "start": "Start",
+        "now": "Now! "
+      }
     }
   }
 }

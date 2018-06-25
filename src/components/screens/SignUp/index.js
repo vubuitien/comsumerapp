@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import Image from 'react-native-remote-svg';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import LinearGradient from 'react-native-linear-gradient';
 import { styles } from './styles';
 import {
   ButtonNext
@@ -29,7 +30,7 @@ class SignUp extends Component {
   }
 
   onNextStep() {
-    this.props.navigation.navigate('FirstStep');
+    this.props.navigation.navigate('GetMore');
   }
 
   _renderHeader() {
@@ -69,7 +70,10 @@ class SignUp extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <LinearGradient
+        colors={['#8f0000', '#ff4a00', '#8f0000']}
+        style={styles.container}
+      >
         <ScrollView>
           {this._renderHeader()}
           <View style={styles.boxSignUp}>
@@ -90,7 +94,7 @@ class SignUp extends Component {
           </View>
           {this._renderMerchant()}
         </ScrollView>
-      </View>
+      </LinearGradient>
     );
   }
 }

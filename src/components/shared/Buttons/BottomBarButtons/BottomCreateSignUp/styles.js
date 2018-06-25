@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
   creat: {
     fontSize: 15,
     fontFamily: Fonts.ubuntuItalic,
+  },
+  creatTitle: {
+    fontSize: 15,
+    fontFamily: Fonts.ubuntuItalic,
+    marginLeft: 3
   }
 });
 

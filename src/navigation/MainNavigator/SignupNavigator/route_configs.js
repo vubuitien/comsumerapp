@@ -4,6 +4,7 @@ import FinalStep from '../../../components/screens/SignUp/FinalStep';
 import FirstStep from '../../../components/screens/SignUp/FirstStep';
 import UploadImage from '../../../components/screens/SignUp/UploadImage';
 import ConfirmEmail from '../../../components/screens/SignUp/FinalStep/ConfirmEmail';
+import GetMore from '../../../components/screens/SignUp/GetMore';
 
 export default RouteConfig = {
   Login: { screen: Login },
@@ -11,5 +12,6 @@ export default RouteConfig = {
   FinalStep: { screen: FinalStep },
   FirstStep: { screen: FirstStep },
   UploadImage: { screen: UploadImage },
-  ConfirmEmail: { screen: ConfirmEmail }
+  ConfirmEmail: { screen: ConfirmEmail },
+  GetMore: { screen: GetMore }
 };

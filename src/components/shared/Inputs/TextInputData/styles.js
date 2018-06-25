@@ -4,7 +4,7 @@ import {
 
 export const styles = StyleSheet.create({
   wrapper: {
-    width: '100%'
+    flex: 1
   },
   text: {
     fontSize: 14,

@@ -30,11 +30,13 @@ class FirstScreen extends Component {
             </View>
           </View>
           <View style={styles.footer}>
-            <Text style={styles.hi}>{I18n.t('first_screen.hi')}</Text>
-            <Image
-              source={require('../../../../../assets/images/pig.svg')}
-              style={styles.imageSvg}
-            />
+            <View style={styles.leftFooter}>
+              <Text style={styles.hi}>{I18n.t('first_screen.hi')}</Text>
+              <Image
+                source={require('../../../../../assets/images/pig.svg')}
+                style={styles.imageSvg}
+              />
+            </View>
             <View style={styles.rightFooter}>
               <Text style={styles.titleFooter}>{I18n.t('first_screen.title_footer')}</Text>
             </View>

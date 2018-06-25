@@ -7,7 +7,8 @@ import {
   UserFactory,
   PasswordFactory,
   ConfirmPasswordFactory,
-  EmailFactory
+  EmailFactory,
+  BirthdayFactory
 } from '../../shared/Form/factories';
 import I18n from '../../../I18n';
 
@@ -41,6 +42,14 @@ const fields = () => {
       placeholder: I18n.t('signup.confirm_password'),
       nameIcon: 'lock',
     },
+    birthday: {
+      type: t.Number,
+      factory: BirthdayFactory,
+      placeholderMonth: I18n.t('signup.month'),
+      placeholderDay: I18n.t('signup.day'),
+      text: I18n.t('signup.text'),
+      placeholderYear: I18n.t('signup.year'),
+    }
   };
 };
 export default fields;

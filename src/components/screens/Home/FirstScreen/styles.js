@@ -42,13 +42,14 @@ export const styles = StyleSheet.create({
     marginLeft: 3,
     fontFamily: Fonts.ubuntuRegular,
   },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
   imageSvg: {
     height: 150,
     right: 20,
+  },
+  leftFooter: {
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    top: 50
   },
   rightFooter: {
     justifyContent: 'flex-end',
@@ -59,7 +60,6 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: Fonts.yellowtail,
     fontSize: 24,
-    right: 110
   },
   hi: {
     color: '#fff',

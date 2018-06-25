@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { styles } from './styles';
 
 export default class ButtonSelect extends Component {
   render() {
+    const styleSelect = !this.props.selected ? styles.styleSelect : styles.styleSelectActive;
+    const styleTextSelect = !this.props.selected ? styles.styleTextSelect : styles.styleTextSelectActive;
     return (
-      <View style={this.props.styleSelect}>
-        <Text style={this.props.styleTextSelect}>{this.props.select}</Text>
+      <View style={styleSelect}>
+        <Icon name={this.props.nameIcon} style={styleTextSelect} />
       </View>
+
     );
   }
 }

@@ -65,7 +65,6 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       width: 40,
       height: 30,
-      backgroundColor: '#741100',
     },
     textOr: {
       color: '#fff',
