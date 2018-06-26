@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Image1 from 'react-native-remote-svg';
 import { styles } from './styles';
 import {
     HeaderBar,
@@ -8,8 +10,7 @@ import {
 } from '../../shared';
 import I18n from '../../../I18n';
 import Row from './Row';
-import Image1 from 'react-native-remote-svg';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 class UserProfile extends Component {
     static navigationOptions = { title: 'UserProfile', header: null };
 
@@ -28,6 +29,16 @@ class UserProfile extends Component {
 
         this.Star_With_Border = 'star-outline';
     }
+
+    onEditProfile() {
+        this.props.navigation.navigate('EditUserProfile');
+    }
+
+    onSideBarPress() {
+        console.log('on sidebar pressed');
+        this.props.navigation.navigate('DrawerOpen');
+    }
+
     _renderCoin() {
         const React_Native_Rating_Bar = [];
         for (let i = 1; i <= this.state.Max_Rating; i++) {
@@ -69,20 +80,11 @@ class UserProfile extends Component {
                                 <Text style={styles.textStyle2}>27 REVIEWS </Text>
 
                             </Text>
-
                         </View>
                     </View>
                 </View>
-            </View >
+            </View>
         );
-    }
-    onEditProfile() {
-        this.props.navigation.navigate('EditUserProfile');
-    }
-
-    onSideBarPress() {
-        console.log('on sidebar pressed');
-        this.props.navigation.navigate('DrawerOpen');
     }
 
     _renderHeader() {

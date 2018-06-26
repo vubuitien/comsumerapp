@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import Fonts from '../../../../constants/fonts';
 
 const styles = StyleSheet.create({
   buttonArrow: {
@@ -13,7 +14,6 @@ const styles = StyleSheet.create({
     width: 19,
     height: 19,
     borderRadius: 50,
-    backgroundColor: '#0063D8',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -24,16 +24,13 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   buttontext: {
-    color: '#0063D8',
     fontSize: 16,
-    fontWeight: 'bold',
-    fontStyle: 'italic',
+    fontFamily: Fonts.ubuntuBoldItalic,
   },
   childText: {
     fontSize: 15,
-    color: '#0063D8',
     marginLeft: 3,
-    fontStyle: 'italic',
+    fontFamily: Fonts.ubuntuLightItalic,
     marginTop: 1
   },
   text: {

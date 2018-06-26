@@ -276,5 +276,55 @@ export const styles = StyleSheet.create({
   },
   buttonSelect: {
     flexDirection: 'row'
-  }
+  },
+  notificationContainer: {
+    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  notificationBox: {
+    width: window.width - 60,
+    flexDirection: 'column',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    backgroundColor: '#FAFAFA',
+  },
+  alignmentNotification: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 20,
+    paddingBottom: 20,
+    flexDirection: 'column',
+  },
+  textTitle: {
+    fontSize: 23,
+    color: '#E45E24',
+    fontFamily: Fonts.ubuntuBoldItalic,
+  },
+  backButtonNotification: {
+    height: 35,
+    alignItems: 'center'
+  },
+  buttonNotification: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 50,
+    justifyContent: 'space-between'
+  },
+  styleCheckboxDo: {
+    marginTop: 5
+  },
+  textBold: {
+    fontSize: 14,
+    marginTop: 10,
+    fontFamily: Fonts.ubuntuBold,
+    color: '#2F364B'
+  },
+  textContent: {
+    fontSize: 11,
+    color: '#2F364B',
+    marginTop: 10,
+    fontFamily: Fonts.ubuntuRegular,
+  },
 });

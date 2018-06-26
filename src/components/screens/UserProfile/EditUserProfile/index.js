@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Spinner from 'react-native-loading-spinner-overlay';
 import { styles } from './styles';
 import {
     HeaderBar,
@@ -8,7 +9,6 @@ import {
     TextDetails,
     ButtonNext
 } from '../../../shared';
-import Spinner from 'react-native-loading-spinner-overlay';
 import Row from '../Row';
 
 class EditUserProfile extends Component {
@@ -164,7 +164,7 @@ class EditUserProfile extends Component {
                     </View>
                     <View style={styles.footer}>
                         <ButtonNext
-                            onPress={() => { this.setState({ wait: true }) }}
+                            onPress={() => { this.setState({ wait: true }); }}
                             style={styles.nextButton}
                             iconName={'chevron-right'}
                             iconSize={15}

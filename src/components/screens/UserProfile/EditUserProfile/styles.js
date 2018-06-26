@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import { Fonts } from '../../../../constants';
+
 const window = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
@@ -42,19 +43,19 @@ export const styles = StyleSheet.create({
     },
     textAdd: {
         fontSize: 16,
-        fontFamily:Fonts.ubuntuBold,
+        fontFamily: Fonts.ubuntuBold,
         color: '#48465B'
     },
     textProfile: {
         fontSize: 16,
         color: '#48465B',
-        fontFamily:Fonts.ubuntuRegular,
+        fontFamily: Fonts.ubuntuRegular,
         marginLeft: 4
     },
     textChild: {
         fontSize: 12,
         color: '#b2b2b2',
-        fontFamily:Fonts.ubuntuItalic
+        fontFamily: Fonts.ubuntuItalic
     },
     middle: {
         flexDirection: 'column',
@@ -74,12 +75,12 @@ export const styles = StyleSheet.create({
     role: {
         fontSize: 15,
         color: '#48465B',
-        fontFamily:Fonts.ubuntuBoldItalic,
+        fontFamily: Fonts.ubuntuBoldItalic,
     },
     position: {
         fontSize: 14,
         color: '#D84B1C',
-        fontFamily:Fonts.ubuntuBoldItalic,
+        fontFamily: Fonts.ubuntuBoldItalic,
         marginLeft: 3
     },
     input: {
@@ -108,7 +109,7 @@ export const styles = StyleSheet.create({
     textInput: {
         color: '#b2b2b2',
         fontSize: 13,
-        fontFamily:Fonts.ubuntuItalic,
+        fontFamily: Fonts.ubuntuItalic,
         top: 12
     },
     user: {
@@ -137,7 +138,7 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         color: '#48465B',
         marginRight: 10,
-        fontFamily:Fonts.ubuntuBoldItalic,
+        fontFamily: Fonts.ubuntuBoldItalic,
     },
     email: {
         bottom: 30

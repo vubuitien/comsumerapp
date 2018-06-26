@@ -1,4 +1,7 @@
 {
+  "dont_show_again": "Don't show again",
+  "got": "Got",
+  "it": "it!",
   "first_screen": {
     "title_header": "Best Deals",
     "text_earn": "Earn DealCoins",
@@ -28,6 +31,13 @@
     "click": "Click",
     "here": "Here!",
     "seller": "Seller!",
+    "username_or_email": "Username or Email",
+    "recover_password": {
+      "title_header": "RECOVER PASSWORD",
+      "cancel": "Cancel",
+      "recover": "RECOVER",
+      "password": "Password "
+    }
   },
   "signup": {
     "user_name": "User Name",
@@ -75,7 +85,11 @@
         "text1": "Choose Categories",
         "text2": "Your company sells",
         "text3": "CANCER",
-        "text4": "OKAY"
+        "text4": "OKAY",
+        "title": "YOUR PREFFERENCES",
+        "text_bold": "CloseDeal will show first the products and services you are interested in.",
+        "text_content_1": "Some stores will give you extras on your birthday. For gender you can select both.",
+        "text_content_2": "See the menu My Preferences for currency, distance, date, time format and other settings.",
       },
       "button":{
         "late": "Later",

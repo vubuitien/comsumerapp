@@ -1,6 +1,7 @@
 import {
   StyleSheet,
 } from 'react-native';
+import Fonts from '../../../constants/fonts';
 
 export const styles = StyleSheet.create({
   wrapper: {
@@ -30,32 +31,38 @@ export const styles = StyleSheet.create({
   text: {
     color: '#000',
     marginLeft: 5,
+    fontFamily: Fonts.ubuntuRegular,
   },
   text1: {
     marginLeft: 5,
-    fontWeight: 'bold',
+    fontFamily: Fonts.ubuntuRegular,
   },
   textChild: {
     color: '#000',
     marginLeft: 2,
+    fontFamily: Fonts.ubuntuRegular,
   },
   textChild1: {
     marginLeft: 2,
+    fontFamily: Fonts.ubuntuRegular,
   },
   name: {
     paddingRight: '1%',
     color: '#000',
+    fontFamily: Fonts.ubuntuRegular,
   },
   name1: {
     paddingRight: '1%',
+    fontFamily: Fonts.ubuntuRegular,
   },
   nameChild: {
     color: '#000',
-    fontWeight: 'bold',
+    fontFamily: Fonts.ubuntuRegular,
     paddingRight: '1%',
   },
   nameChild1: {
     fontWeight: 'bold',
     paddingRight: '1%',
+    fontFamily: Fonts.ubuntuRegular,
   },
 });

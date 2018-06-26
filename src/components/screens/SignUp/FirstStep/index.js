@@ -10,7 +10,7 @@ import Image from 'react-native-remote-svg';
 import { graphql } from 'react-apollo';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import LinearGradient from 'react-native-linear-gradient';
-import { BottomCreateSignUp, ButtonSelect, ListViewWrapper, ButtonNext } from '../../../shared';
+import { BottomCreateSignUp, ButtonSelect, ListViewWrapper, ButtonNext, ButtonBack, CheckBoxItems } from '../../../shared';
 import { styles } from './styles';
 import CategoryItems from './Category/CategoryItems';
 import { CategoryQuery } from './queries';
@@ -32,6 +32,7 @@ class FirstStep extends Component {
     this._renderCategory = this._renderCategory.bind(this);
     this._renderBirthday = this._renderBirthday.bind(this);
     this._renderGender = this._renderGender.bind(this);
+    this._renderModal = this._renderModal.bind(this);
     this._renderModalCategory = this._renderModalCategory.bind(this);
     this.onNext = this.onNext.bind(this);
     this.state = {
@@ -41,16 +42,19 @@ class FirstStep extends Component {
       male: true,
       female: true,
       male_female: true,
+      modal: true,
     };
   }
-  onNext() {
-    this.props.navigation.navigate('ThanksSignUp');
-  }
+
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps === this.props && nextState === this.state) {
       return false;
     }
     return true;
+  }
+
+  onNext() {
+    this.props.navigation.navigate('ThanksSignUp');
   }
 
   onMale() {
@@ -116,6 +120,52 @@ class FirstStep extends Component {
 
   _setStateCheck = () => {
     this.setState({ dataCheck: arrayData });
+  }
+
+  _renderModal() {
+    return (
+      <Spinner
+        visible={this.state.modal}
+        overlayColor='rgba(0, 0, 0, 0.80)'
+      >
+        <View style={styles.notificationContainer}>
+          <View style={styles.notificationBox}>
+            <View style={styles.alignmentNotification}>
+              <Text style={styles.textTitle}>
+                {I18n.t('signup.create_account.modal.title')}
+              </Text>
+              <Text style={styles.textBold}>
+                {I18n.t('signup.create_account.modal.text_bold')}
+              </Text>
+              <Text style={styles.textContent}>
+                {I18n.t('signup.create_account.modal.text_content_1')}
+              </Text>
+              <Text style={styles.textContent}>
+                {I18n.t('signup.create_account.modal.text_content_2')}
+              </Text>
+              <View style={styles.buttonNotification}>
+                <CheckBoxItems
+                  title={I18n.t('dont_show_again')}
+                  style={styles.styleCheckboxDo}
+                  background={'#005ED6'}
+                  onPress={() => {}}
+                  color={'#005ED6'}
+                />
+                <ButtonBack
+                  style={styles.backButtonNotification}
+                  onPress={() => { this.setState({ modal: false }); }}
+                  iconName={'arrow-right-thick'}
+                  iconSize={15}
+                  title={I18n.t('got')}
+                  childText={I18n.t('it')}
+                  color={'#E45E24'}
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </Spinner>
+    );
   }
 
   _renderModalCategory = () => {
@@ -274,6 +324,7 @@ class FirstStep extends Component {
         colors={['#8f0000', '#ff4a00', '#8f0000']}
         style={styles.container}
       >
+        {this._renderModal()}
         {this._renderModalCategory()}
         <ScrollView>
           {this._renderHeader()}

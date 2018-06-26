@@ -95,6 +95,7 @@ export const styles = StyleSheet.create({
     },
     email: {
         flexDirection: 'row',
+        alignItems: 'center',
     },
     text4: {
         fontSize: 14,

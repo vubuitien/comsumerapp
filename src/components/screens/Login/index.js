@@ -31,7 +31,9 @@ class Login extends Component {
     this.renderLogin = this.renderLogin.bind(this);
     this.renderCreateAccount = this.renderCreateAccount.bind(this);
     this.renderMerchant = this.renderMerchant.bind(this);
+    this.onPressFirstScreen = this.onPressFirstScreen.bind(this);
     this.onPress = this.onPress.bind(this);
+    this.onPassword = this.onPassword.bind(this);
   }
   //
   // async onLogin(values, context) {
@@ -51,8 +53,16 @@ class Login extends Component {
   //   });
   // }
 
-  onSignupPress() {
+  onPressFirstScreen() {
     this.props.navigation.navigate('FirstScreen');
+  }
+
+  onPassword() {
+    this.props.navigation.navigate('RecoverPassword');
+  }
+
+  onSignupPress() {
+    this.props.navigation.navigate('Welcome');
   }
 
   onPress() {
@@ -113,7 +123,11 @@ class Login extends Component {
       <View style={styles.formLogin}>
         {this.props.inputs.username}
         {this.props.inputs.password}
-        <TextPassword styleText={styles.textPassword} title={I18n.t('login.forgot_your_password')} />
+        <TextPassword
+          styleText={styles.textPassword}
+          title={I18n.t('login.forgot_your_password')}
+          onPress={this.onPassword}
+        />
         <ButtonSignin
           style={styles.loginButton}
           title={I18n.t('login.title')}
@@ -137,7 +151,7 @@ class Login extends Component {
                     iconName={'facebook'} iconSize={20}
                     iconColor={'#fff'}
                     title={I18n.t('login.facebook')}
-                    onPress={this.onPress}
+                    onPress={this.onPressFirstScreen}
                   />
                   <ButtonLogin
                     style={styles.buttonLoginGoogle}

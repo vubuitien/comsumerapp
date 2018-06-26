@@ -1,6 +1,7 @@
 import {
   StyleSheet,
 } from 'react-native';
+import { Fonts } from '../../../constants';
 
 export const styles = StyleSheet.create({
   text: {
@@ -11,7 +12,7 @@ export const styles = StyleSheet.create({
     paddingTop: 22,
     fontSize: 17,
     color: '#fff',
-    fontWeight: 'bold',
+    fontFamily: Fonts.ubuntuBold
   },
   headerClose: {
     flexDirection: 'row',
@@ -25,6 +26,7 @@ export const styles = StyleSheet.create({
   headerNotify: {
     color: '#fff',
     fontSize: 16,
+    fontFamily: Fonts.ubuntuLight,
     paddingTop: 20,
     paddingRight: '5%',
   }

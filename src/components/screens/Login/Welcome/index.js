@@ -4,34 +4,35 @@ import {
     View,
     ScrollView,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { styles } from './styles';
 import {
-    ButtonSignin,
     ButtonNext
 } from '../../../shared';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 export default class Welcome extends Component {
     static navigationOptions = { title: 'Login', header: null };
     constructor(props) {
         super(props);
-        this._renderButton = this._renderButton.bind(this)
+        this._renderButton = this._renderButton.bind(this);
         this._renderCheck = this._renderCheck.bind(this);
         this._renderContaint = this._renderContaint.bind(this);
-        this.onContinue=this.onContinue.bind(this);
-
+        this.onContinue = this.onContinue.bind(this);
     }
-    onContinue(){
+
+    onContinue() {
         this.props.navigation.navigate('UserProfile');
     }
+
     _renderButton() {
         return (
             <ButtonNext
             onPress={this.onContinue}
                 style={styles.styleButtonNext}
                 iconName={'chevron-right'}
-                iconSize={20}
+                iconSize={18}
                 iconColor={'#FF8700'}
-                title={'Continue'}
+                title={'Continue '}
             />
         );
     }
@@ -68,7 +69,7 @@ export default class Welcome extends Component {
                 </View>
 
                 <View style={styles.containt2}>
-                    <Text style={styles.text5}>Reputation with starts</Text>
+                    <Text style={styles.text5}>Reputation with stars</Text>
                     <View style={styles.yellowstar}>
                         <Icon name={'star'} size={35} style={styles.yellowstar1} />
                         <Icon name={'star'} size={35} style={styles.yellowstar1} />
@@ -104,4 +105,3 @@ export default class Welcome extends Component {
         );
     }
 }
-
