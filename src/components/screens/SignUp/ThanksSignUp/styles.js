@@ -87,12 +87,13 @@ export const styles = StyleSheet.create({
         top: 28,
         left: window.width / 12 - 32,
         marginRight: 30,
-        
+        color: '#FFC400'
     },
     styleText2: {
         fontSize: 47,
         fontFamily: Fonts.lobsterRegular,
-        paddingLeft: 18
+        paddingLeft: 18,
+        color: '#FFC400'
     },
     styleTextCoin2: {
         width: window.width / 2 + 60,
@@ -114,18 +115,21 @@ export const styles = StyleSheet.create({
     styleText3: {
         fontSize: 49,
         fontFamily: Fonts.ubuntuBoldItalic,
+        color: '#FFC400'
     },
     styleText4: {
         fontSize: 18,
         fontFamily: Fonts.ubuntuBoldItalic,
         position: 'absolute',
-        top: window.width / 7 - 2
+        top: window.width / 7 - 2,
+        color: '#FFC400'
     },
     styleText5: {
         fontSize: 18,
         fontFamily: Fonts.ubuntuBoldItalic,
         marginLeft: 20,
-        marginTop: 10
+        marginTop: 10,
+        color: '#FFC400'
     },
     styleTextCoin4: {
         alignItems: 'center',
@@ -177,11 +181,12 @@ export const styles = StyleSheet.create({
     styleText8: {
         fontSize: 22,
         fontFamily: Fonts.ubuntuBoldItalic,
-
+        color: '#FFC400'
     },
     styleText9: {
         fontSize: 16,
         fontFamily: Fonts.ubuntuBoldItalic,
+        color: '#FFC400'
     },
     styleWrapInsert: {
         flexDirection: 'row'
@@ -231,6 +236,7 @@ export const styles = StyleSheet.create({
     imageSvg2: {
         width: window.width / 4 + 50,
         height: window.width / 4 + 50,
+        marginTop: 5
     },
     footer1: {
         marginLeft: window.width / 9
@@ -239,7 +245,7 @@ export const styles = StyleSheet.create({
         width: window.width / 9 + 5,
         position: 'absolute',
         left: window.width / 9 + 30,
-        top: 8
+        top: 15
     },
     styleText11: {
         fontFamily: Fonts.yellowtail,
@@ -252,5 +258,110 @@ export const styles = StyleSheet.create({
         backgroundColor: '#ff8700',
         paddingLeft: 15,
         paddingRight: 15,
-    }
+    },
+
+    notificationSpecial: {
+        flexDirection: 'column',
+        flex: 1,
+        alignItems: 'center',
+    },
+
+    notificationSpecialBox: {
+        width: window.width - 65,
+        height: window.width - 30,
+        flexDirection: 'column',
+        backgroundColor: '#fff',
+        marginTop: window.width / 2 - 20
+    },
+
+    alignmentSpecial: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingTop: 15,
+        paddingBottom: 15,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start'
+    },
+    boxSpecial: {
+        width: '100%',
+        height: window.width / 3 + 5,
+    },
+    boxSpecial1: {
+        width: '100%',
+        height: window.width / 4,
+    },
+    titleSpecial: {
+        color: '#F54100',
+        fontFamily: Fonts.ubuntuBoldItalic,
+        fontSize: 28,
+        marginTop: 10,
+        marginBottom: 15
+    },
+    titleSpecial1: {
+        color: '#4b4c5b',
+        fontFamily: Fonts.ubuntuBold,
+        fontSize: 13
+    },
+    titleSpecial2: {
+        color: '#4b4c5b',
+        fontFamily: Fonts.ubuntuRegular,
+        fontSize: 11,
+    },
+    titleSpecial3: {
+        color: '#4b4c5b',
+        fontFamily: Fonts.ubuntuRegular,
+        fontSize: 11,
+        marginTop: window.width / 9 - 50,
+        marginBottom: window.width / 9 - 20,
+    },
+    viewShare: {
+        width: '100%',
+        height: window.width / 6,
+        backgroundColor: '#FF4A00',
+        overflow: 'hidden',
+        borderRadius: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textShare1: {
+        width: window.width / 4,
+        fontFamily: Fonts.ubuntuBoldItalic,
+        fontSize: 14,
+        color: '#fff',
+        textAlign: 'center',
+    },
+    textShare2: {
+        color: '#660800',
+        fontSize: 30,
+        fontFamily: Fonts.ubuntuBoldItalic
+    },
+    textShare3: {
+        width: window.width / 4,
+        fontFamily: Fonts.ubuntuBoldItalic,
+        fontSize: 14,
+        color: '#f5b300',
+        alignItems: 'flex-start'
+    },
+    imageSvg3: {
+        width: window.width / 6 - 5,
+        height: window.width / 6 - 5
+
+    },
+    buttonNotification: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 10,
+        justifyContent: 'space-between',
+    },
+    styleCheckboxDo: {
+        marginTop: 10
+    },
+    backButtonNotification: {
+        width: 150,
+        height: 35,
+        borderRadius: 15,
+        overflow: 'hidden'
+    },
 })

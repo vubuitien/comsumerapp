@@ -31,7 +31,7 @@ export default class Welcome extends Component {
                 iconName={'chevron-right'}
                 iconSize={20}
                 iconColor={'#FF8700'}
-                title={'Continue'}
+                title={'Continue '}
             />
         );
     }

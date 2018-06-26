@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     width: 19,
     height: 19,
     borderRadius: 50,
-    backgroundColor: '#0063D8',
+    backgroundColor: '#EA4D0D',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   buttontext: {
-    color: '#0063D8',
+    color: '#EA4D0D',
     fontSize: 16,
     fontWeight: 'bold',
     fontStyle: 'italic',
   },
   childText: {
     fontSize: 15,
-    color: '#0063D8',
+    color: '#EA4D0D',
     marginLeft: 3,
     fontStyle: 'italic',
     marginTop: 1
