@@ -3,20 +3,21 @@ import {
     Text,
     ScrollView,
     TextInput
-} from 'react-native'
+} from 'react-native';
 import React, { Component } from 'react';
-import { styles } from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import Spinner from 'react-native-loading-spinner-overlay';
 import Image from 'react-native-remote-svg';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { styles } from './styles';
 import {
     ButtonNext,
     CheckBoxItems,
     ButtonBack
 }
-    from '../../../shared'
-import I18n from '../../../../I18n'
+from '../../../shared';
+import I18n from '../../../../I18n';
+
 export default class ThanksSignUp extends Component {
     constructor(props) {
         super(props);
@@ -28,34 +29,34 @@ export default class ThanksSignUp extends Component {
         this._renderModal = this._renderModal.bind(this);
         this.onNext = this.onNext.bind(this);
         this.state = {
-            save: false
+            modal: false
         };
     }
     componentWillMount() {
-        this.setState({ save: true });
+        this.setState({ modal: true });
     }
     onNext() {
         this.props.navigation.navigate('GetMore');
     }
-    showModalAgain = async(value)=>{
+    showModalAgain = async (value) => {
         if (!value) {
-          await console.log("ag")
-          AsyncStorage.setItem("noAgain","again")
-        } else{
-          await console.log("no ag")
-          AsyncStorage.removeItem("noAgain")
+          await console.log('ag');
+          AsyncStorage.setItem('noAgain', 'again')
+        } else {
+          await console.log('no ag');
+          AsyncStorage.removeItem('noAgain');
         }
       }
     _renderModal() {
         return (
             <Spinner
-                visible={this.state.save}
+                visible={this.state.modal}
                 overlayColor='rgba(0, 0, 0, 0.80)'
             >
                 <View style={styles.notificationSpecial}>
                     <View style={styles.notificationSpecialBox}>
                         <View style={styles.alignmentSpecial}>
-                            <Text style={styles.titleSpecial}>{I18n.t('signup.create_account.button.remember')}! </Text>
+                            <Text style={styles.titleSpecial}>{I18n.t('signup.create_account.button.remember')}</Text>
 
                             <View style={styles.boxSpecial}>
                                 <Text style={styles.boxSpecial1}>
@@ -63,11 +64,11 @@ export default class ThanksSignUp extends Component {
                                         {I18n.t('signup.create_account.thanks.reservation_dealcoins')}
                                     </Text>
                                     <Text style={styles.titleSpecial2}>
-                                        are good to reserve offers and equal amount when you close a deal. Use earned DealCoins to pay for any pur chase anywhere DealCoins are accepted.
+                                        {I18n.t('signup.create_account.thanks.content')}
                                     </Text>
                                 </Text>
                                 <Text style={styles.titleSpecial3}>
-                                    See the menu My Preferences for currency, distance, date, time and other settings.
+                                  {I18n.t('signup.create_account.thanks.content_2')}
                                 </Text>
                             </View>
                             <View style={styles.viewShare}>
@@ -75,7 +76,7 @@ export default class ThanksSignUp extends Component {
                                 <Text style={styles.textShare1}>
                                     {I18n.t('signup.create_account.thanks.share_coin')}
                                 </Text>
-                                <Text style={styles.textShare2}>+</Text>
+                                <Text style={styles.textShare2}>{I18n.t('signup.create_account.thanks.plus')}</Text>
                                 <Image
                                     source={require('../../../../../assets/images/monedas.svg')}
                                     style={styles.imageSvg3}
@@ -85,21 +86,22 @@ export default class ThanksSignUp extends Component {
                                 </Text>
                             </View>
                             <View style={styles.buttonNotification}>
-                                <CheckBoxItems
-                                    title={I18n.t('signup.create_account.thanks.dont')}
-                                    style={styles.styleCheckboxDo}
-                                    background={'#005ED6'}
-                                    color={'#005ED6'}
-                                    onPress={this.showModalAgain}
-                                />
-                                <ButtonBack
-                                    style={styles.backButtonNotification}
-                                    onPress={() => this.setState({ save: false })}
-                                    iconName={'arrow-right-thick'}
-                                    iconSize={15}
-                                    title={I18n.t('signup.create_account.thanks.got')}
-                                    childText={I18n.t('signup.create_account.thanks.it')}
-                                />
+                              <CheckBoxItems
+                                title={I18n.t('dont_show_again')}
+                                style={styles.styleCheckboxDo}
+                                background={'#005ED6'}
+                                onPress={() => {}}
+                                color={'#005ED6'}
+                              />
+                              <ButtonBack
+                                style={styles.backButtonNotification}
+                                onPress={() => { this.setState({ modal: false }); }}
+                                iconName={'arrow-right-thick'}
+                                iconSize={15}
+                                title={I18n.t('got')}
+                                childText={I18n.t('it')}
+                                color={'#E45E24'}
+                              />
                             </View>
                         </View>
                     </View>
@@ -111,10 +113,10 @@ export default class ThanksSignUp extends Component {
         return (
             <View style={styles.styleThanks}>
                 <View style={styles.wrapTextThanks}>
-                    <Text style={styles.styleThanks1}>Thanks </Text>
+                    <Text style={styles.styleThanks1}>{I18n.t('signup.create_account.thanks.thank')}</Text>
                     <View style={styles.wrapSignup}>
-                        <Text style={styles.styleThanks2}>For</Text>
-                        <Text style={styles.styleThank3}>SIGNING UP </Text>
+                        <Text style={styles.styleThanks2}>{I18n.t('signup.create_account.thanks.for')}</Text>
+                        <Text style={styles.styleThank3}>{I18n.t('signup.create_account.thanks.signup')}</Text>
                     </View>
                 </View>
             </View>
@@ -124,8 +126,8 @@ export default class ThanksSignUp extends Component {
         return (
             <View style={styles.styleCon}>
                 <View style={styles.wrapstyleCon}>
-                    <Text style={styles.styleCon1}>and </Text>
-                    <Text style={styles.styleCon2}>Congratulations!  </Text>
+                    <Text style={styles.styleCon1}>{I18n.t('signup.create_account.thanks.and')}</Text>
+                    <Text style={styles.styleCon2}>{I18n.t('signup.create_account.thanks.congratulations')}</Text>
                 </View>
             </View>
         )
@@ -134,8 +136,8 @@ export default class ThanksSignUp extends Component {
         return (
             <View style={styles.styleCoins}>
                 <View style={styles.styleTextCoin1}>
-                    <Text style={styles.styleText1}>YOU </Text>
-                    <Text style={styles.styleText2}>Won</Text>
+                    <Text style={styles.styleText1}>{I18n.t('signup.create_account.thanks.you')}</Text>
+                    <Text style={styles.styleText2}>{I18n.t('signup.create_account.thanks.won')}</Text>
                 </View>
                 <View style={styles.styleTextCoin2}>
                     <Image
@@ -143,14 +145,14 @@ export default class ThanksSignUp extends Component {
                         style={styles.imageSvg}
                     />
                     <View style={styles.styleTextCoin3}>
-                        <Text style={styles.styleText3}>2500 </Text>
-                        <Text style={styles.styleText4}>Reservation</Text>
-                        <Text style={styles.styleText5}>DealCoins! </Text>
+                        <Text style={styles.styleText3}>{I18n.t('signup.create_account.thanks.number')}</Text>
+                        <Text style={styles.styleText4}>{I18n.t('signup.create_account.thanks.reservation')}</Text>
+                        <Text style={styles.styleText5}>{I18n.t('signup.create_account.thanks.dealcoins')}</Text>
                     </View>
                 </View>
                 <View style={styles.styleTextCoin4}>
-                    <Text style={styles.styleText6}>GOOD TO RESERVE OFFERS AND </Text>
-                    <Text style={styles.styleText7}>EARN EQUAL AMOUNT TO SPEND </Text>
+                    <Text style={styles.styleText6}>{I18n.t('signup.create_account.thanks.good_to')}</Text>
+                    <Text style={styles.styleText7}>{I18n.t('signup.create_account.thanks.earn_equal')}</Text>
                 </View>
             </View>
         )
@@ -166,31 +168,33 @@ export default class ThanksSignUp extends Component {
                     <View style={styles.styleTextCoin7}>
 
                         <View style={styles.styleTextCoin8}>
-                            <Text style={styles.styleText8}>Win +</Text>
-                            <Text style={styles.styleText9}> 100 DealCoins! </Text>
+                            <Text style={styles.styleText8}>{I18n.t('signup.create_account.thanks.win')}</Text>
+                            <Text style={styles.styleText9}>{I18n.t('signup.create_account.thanks.number_dealcoins')}</Text>
                         </View>
                         <View style={styles.styleWrapInsert}>
                             <View style={styles.styleInsert}>
                                 <TextInput
-                                    placeholder={'Insert Code'}
+                                    placeholder={I18n.t('signup.create_account.thanks.placeholder')}
                                     underlineColorAndroid='transparent'
-                                    style={styles.styleTextInput} />
-
+                                    style={styles.styleTextInput}
+                                />
                             </View>
                             <View style={styles.buttonInsert}>
                                 <Icon
                                     name='arrow-right-thick'
-                                    style={styles.iconNext} />
+                                    style={styles.iconNext}
+                                />
                             </View>
                         </View>
                         <Text style={styles.styleText10}>
-                            Enter referral code to win extra DealCoins
-                                </Text>
+                            {I18n.t('signup.create_account.thanks.text_placeholder')}
+                        </Text>
                     </View>
                 </View>
             </View>
-        )
+        );
     }
+
     _renderPig() {
         return (
             <View style={styles.footer}>
@@ -200,7 +204,7 @@ export default class ThanksSignUp extends Component {
                         style={styles.imageSvg2}
                     />
                     <View style={styles.viewPigText}>
-                        <Text style={styles.styleText11}> Are you Ready?</Text>
+                        <Text style={styles.styleText11}>{I18n.t('signup.create_account.thanks.are_you_ready')}</Text>
                     </View>
                 </View>
                 <ButtonNext
@@ -209,8 +213,8 @@ export default class ThanksSignUp extends Component {
                     iconName={'chevron-right'}
                     iconSize={20}
                     iconColor={'#ff8700'}
-                    title={'Start'}
-                    childText={'Earning! '}
+                    title={I18n.t('signup.create_account.thanks.start')}
+                    childText={I18n.t('signup.create_account.thanks.earn')}
                 />
             </View>
         );
@@ -219,7 +223,8 @@ export default class ThanksSignUp extends Component {
         return (
             <LinearGradient
                 colors={['#8f0000', '#ff4a00', '#8f0000']}
-                style={styles.container}>
+                style={styles.container}
+            >
                 <ScrollView >
                     {this._renderModal()}
                     {this._renderThanks()}
