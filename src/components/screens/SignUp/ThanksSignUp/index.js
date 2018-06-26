@@ -7,9 +7,16 @@ import {
 import React, { Component } from 'react';
 import { styles } from './styles';
 import LinearGradient from 'react-native-linear-gradient';
+import Spinner from 'react-native-loading-spinner-overlay';
 import Image from 'react-native-remote-svg';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ButtonNext } from '../../../shared'
+import {
+    ButtonNext,
+    CheckBoxItems,
+    ButtonBack
+}
+    from '../../../shared'
+import I18n from '../../../../I18n'
 export default class ThanksSignUp extends Component {
     constructor(props) {
         super(props);
@@ -18,10 +25,87 @@ export default class ThanksSignUp extends Component {
         this._renderCoins = this._renderCoins.bind(this);
         this._renderInsertCoin = this._renderInsertCoin.bind(this);
         this._renderPig = this._renderPig.bind(this);
-        this.onNext=this.onNext.bind(this);
+        this._renderModal = this._renderModal.bind(this);
+        this.onNext = this.onNext.bind(this);
+        this.state = {
+            save: false
+        };
     }
-    onNext(){
+    componentWillMount() {
+        this.setState({ save: true });
+    }
+    onNext() {
         this.props.navigation.navigate('GetMore');
+    }
+    showModalAgain = async(value)=>{
+        if (!value) {
+          await console.log("ag")
+          AsyncStorage.setItem("noAgain","again")
+        } else{
+          await console.log("no ag")
+          AsyncStorage.removeItem("noAgain")
+        }
+      }
+    _renderModal() {
+        return (
+            <Spinner
+                visible={this.state.save}
+                overlayColor='rgba(0, 0, 0, 0.80)'
+            >
+                <View style={styles.notificationSpecial}>
+                    <View style={styles.notificationSpecialBox}>
+                        <View style={styles.alignmentSpecial}>
+                            <Text style={styles.titleSpecial}>{I18n.t('signup.create_account.button.remember')}! </Text>
+
+                            <View style={styles.boxSpecial}>
+                                <Text style={styles.boxSpecial1}>
+                                    <Text style={styles.titleSpecial1}>
+                                        {I18n.t('signup.create_account.thanks.reservation_dealcoins')}
+                                    </Text>
+                                    <Text style={styles.titleSpecial2}>
+                                        are good to reserve offers and equal amount when you close a deal. Use earned DealCoins to pay for any pur chase anywhere DealCoins are accepted.
+                                    </Text>
+                                </Text>
+                                <Text style={styles.titleSpecial3}>
+                                    See the menu My Preferences for currency, distance, date, time and other settings.
+                                </Text>
+                            </View>
+                            <View style={styles.viewShare}>
+
+                                <Text style={styles.textShare1}>
+                                    {I18n.t('signup.create_account.thanks.share_coin')}
+                                </Text>
+                                <Text style={styles.textShare2}>+</Text>
+                                <Image
+                                    source={require('../../../../../assets/images/monedas.svg')}
+                                    style={styles.imageSvg3}
+                                />
+                                <Text style={styles.textShare3}>
+                                    {I18n.t('signup.create_account.thanks.more_coin')}
+                                </Text>
+                            </View>
+                            <View style={styles.buttonNotification}>
+                                <CheckBoxItems
+                                    title={I18n.t('signup.create_account.thanks.dont')}
+                                    style={styles.styleCheckboxDo}
+                                    background={'#005ED6'}
+                                    color={'#005ED6'}
+                                    onPress={this.showModalAgain}
+                                />
+                                <ButtonBack
+                                    style={styles.backButtonNotification}
+                                    onPress={() => this.setState({ save: false })}
+                                    iconName={'arrow-right-thick'}
+                                    iconSize={15}
+                                    title={I18n.t('signup.create_account.thanks.got')}
+                                    childText={I18n.t('signup.create_account.thanks.it')}
+                                />
+                            </View>
+                        </View>
+                    </View>
+                </View>
+            </Spinner>
+        );
     }
     _renderThanks() {
         return (
@@ -120,13 +204,13 @@ export default class ThanksSignUp extends Component {
                     </View>
                 </View>
                 <ButtonNext
-                onPress={this.onNext}
+                    onPress={this.onNext}
                     style={styles.buttonStart}
                     iconName={'chevron-right'}
                     iconSize={20}
                     iconColor={'#ff8700'}
                     title={'Start'}
-                    childText={'Earning!'}
+                    childText={'Earning! '}
                 />
             </View>
         );
@@ -137,6 +221,7 @@ export default class ThanksSignUp extends Component {
                 colors={['#8f0000', '#ff4a00', '#8f0000']}
                 style={styles.container}>
                 <ScrollView >
+                    {this._renderModal()}
                     {this._renderThanks()}
 
                     {this._renderCon()}

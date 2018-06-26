@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     headerBar: {
         flexDirection: 'row',
         backgroundColor: '#F03500',
+        fontFamily: Fonts.ubuntuRegular
     },
     header: {
         flexDirection: 'column',
@@ -37,14 +38,14 @@ export const styles = StyleSheet.create({
     },
     name: {
         fontSize: 24,
-        fontFamily:Fonts.ubuntuBold,
+        fontFamily: Fonts.ubuntuBold,
         color: '#fff',
         lineHeight: 24,
         marginTop: 5
     },
     username: {
         fontSize: 13,
-        fontFamily:Fonts.ubuntuBold,
+        fontFamily: Fonts.ubuntuBold,
         color: '#fff',
     },
     infomation: {
@@ -52,6 +53,22 @@ export const styles = StyleSheet.create({
         paddingBottom: 30,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    textDate: {
+        width: window.width,
+        flexDirection: 'row',
+        textAlign: 'center',
+        marginTop: 10
+    },
+    textDate1: {
+        fontFamily: Fonts.ubuntuBoldItalic,
+        fontSize: 14,
+        color: '#48465B',
+    },
+    textDate2: {
+        fontFamily: Fonts.ubuntuItalic,
+        fontSize: 14,
+        color: '#48465B'
     },
     role: {
         fontSize: 18,
@@ -152,7 +169,7 @@ export const styles = StyleSheet.create({
     },
     textStyle1: {
         color: "#5E5E63",
-        fontFamily:Fonts.ubuntuRegular,
+        fontFamily: Fonts.ubuntuRegular,
     },
     textStyle2: {
         fontSize: 10,

@@ -10,6 +10,7 @@ import {
     ButtonNext
 } from '../../../shared';
 import Row from '../Row';
+import I18n from '../../../../I18n';
 
 class EditUserProfile extends Component {
     static navigationOptions = { title: 'EditProfile', header: null };
@@ -68,7 +69,7 @@ class EditUserProfile extends Component {
     _renderProfileData() {
         return (
             <View>
-                <Text style={styles.role}>Profile Data:</Text>
+                <Text style={styles.role}>{I18n.t('userProfile.editProfile.profile_data')}</Text>
                 <View style={styles.boxRowMap}>
                     <Row
                         iconName={'map-marker'}
@@ -99,7 +100,7 @@ class EditUserProfile extends Component {
         return (
             <View style={styles.user}>
                 <View style={styles.infomation}>
-                    <Text style={styles.position}>MY ACCOUNT  </Text>
+                    <Text style={styles.position}>{I18n.t('userProfile.myAccount')}</Text>
                 </View>
                 <View style={styles.input}>
                     <Text style={styles.textInput}>Name</Text>
@@ -168,8 +169,9 @@ class EditUserProfile extends Component {
                             style={styles.nextButton}
                             iconName={'chevron-right'}
                             iconSize={15}
-                            title={'SAVE'}
-                            childText={'Profile'}
+                            iconColor={'#FF8700'}
+                            title={'SAVE '}
+                            childText={'Profile '}
                         />
                     </View>
                 </ScrollView>

@@ -23,7 +23,6 @@ class ButtonNext extends Component {
           <View style={styles.buttonArrow}>
             <View style={styles.iconButton}>
               <Icon
-                style={styles.icon}
                 name={this.props.iconName}
                 size={this.props.iconSize}
                 color={this.props.iconColor}

@@ -95,6 +95,7 @@ export const styles = StyleSheet.create({
     },
     email: {
         flexDirection: 'row',
+<<<<<<< HEAD
         alignItems: 'center',
     },
     text4: {
@@ -164,5 +165,4 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
         marginRight: 10,
     }
-
 })

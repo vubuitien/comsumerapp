@@ -25,7 +25,7 @@
     "text_name_account": "ClosDeal Account! ",
     "text1": "By signing in, you agreeing to ClosDeal",
     "text2": "---- ",
-    "text3": "Terms and conditions ----" ,
+    "text3": "Terms and conditions ----",
     "sign_in": "Sign In",
     "title_footer": "Are you a Merchant ? ",
     "click": "Click",
@@ -75,13 +75,13 @@
         "gender_title": "Products & Services",
         "gender_content": "For Gender"
       },
-      "category":{
+      "category": {
         "text1": "Improve Your",
         "text2": "Search!  ",
         "create_btn": "Add ",
         "name_btn": "Category! ",
       },
-      "modal":{
+      "modal": {
         "text1": "Choose Categories",
         "text2": "Your company sells",
         "text3": "CANCER",
@@ -91,7 +91,7 @@
         "text_content_1": "Some stores will give you extras on your birthday. For gender you can select both.",
         "text_content_2": "See the menu My Preferences for currency, distance, date, time format and other settings.",
       },
-      "button":{
+      "button": {
         "late": "Later",
         "remember": "Remember",
         "continue": "Continue ",
@@ -113,7 +113,22 @@
         "title_or": "it's up to you! ",
         "start": "Start",
         "now": "Now! "
+      },
+      "thanks": {
+        "reservation_dealcoins": "RESERVATION DEALCOINS ",
+        "share_coin": "SHARE AND EARN",
+        "more_coin": "MORE DealCoins! ",
+        "dont": "Don't show again",
+        "got": "Got",
+        "it": "it!"
       }
+    }
+  },
+  "userProfile":{
+    "myAccount":"MY ACCOUNT ",
+    "dateOfBirth":" Date of Birth ",
+    "editProfile":{
+      "profile_data":"Profile Data:"
     }
   }
 }

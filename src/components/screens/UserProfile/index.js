@@ -122,7 +122,7 @@ class UserProfile extends Component {
                 {this._renderHeader()}
                 {this._renderCoin()}
                 <View style={styles.infomation}>
-                    <Text style={styles.position}>MY ACCOUNT  </Text>
+                    <Text style={styles.position}>{I18n.t('userProfile.myAccount')}</Text>
                     <Row
                         iconName={'email'}
                         title={'Eddy.kievs@closdeal.com'}
@@ -138,6 +138,14 @@ class UserProfile extends Component {
                             hasSecondText
                         />
                     </View>
+                    <Text style={styles.textDate}>
+                        <Text style={styles.textDate1}>
+                            {I18n.t('userProfile.dateOfBirth')}
+                        </Text>
+                        <Text style={styles.textDate2}>
+                            05-04-1980
+                        </Text>
+                    </Text>
                     <Row
                         iconName={'map-marker'}
                         title={'Hollywod, South Florida. USA'}
