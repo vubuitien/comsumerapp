@@ -112,12 +112,10 @@ export default class ThanksSignUp extends Component {
     _renderThanks() {
         return (
             <View style={styles.styleThanks}>
-                <View style={styles.wrapTextThanks}>
-                    <Text style={styles.styleThanks1}>{I18n.t('signup.create_account.thanks.thank')}</Text>
-                    <View style={styles.wrapSignup}>
-                        <Text style={styles.styleThanks2}>{I18n.t('signup.create_account.thanks.for')}</Text>
-                        <Text style={styles.styleThank3}>{I18n.t('signup.create_account.thanks.signup')}</Text>
-                    </View>
+                <Text style={styles.styleThanks1}>{I18n.t('signup.create_account.thanks.thank')}</Text>
+                <View style={styles.wrapSignup}>
+                    <Text style={styles.styleThanks2}>{I18n.t('signup.create_account.thanks.for')}</Text>
+                    <Text style={styles.styleThank3}>{I18n.t('signup.create_account.thanks.signup')}</Text>
                 </View>
             </View>
         );

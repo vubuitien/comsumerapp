@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     },
     imageSvg: {
       height: 120,
-      right: 30
+      right: 30,
     },
     hi: {
       color: '#fff',

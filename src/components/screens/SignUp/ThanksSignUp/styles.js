@@ -7,42 +7,31 @@ export const styles = StyleSheet.create({
         backgroundColor: '#6A0000'
     },
     styleThanks: {
-        width: window.width,
-        height: window.width / 3 - 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    styleThanks1: {
-        fontFamily: Fonts.lobsterRegular,
-        fontSize: 48,
-        color: '#fff',
-        width: '100%'
-    },
-    wrapTextThanks: {
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        width: window.width / 3 + 30,
-        height: window.width / 4,
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingTop: 20,
+      paddingBottom: 20
     },
     wrapSignup: {
-        width: '100%',
-        flexDirection: 'row',
-        position: 'absolute',
-        bottom: 0,
-        marginBottom: 3,
-    },
-    styleThanks2: {
-        fontFamily: Fonts.ubuntuRegular,
-        color: '#fff',
-        fontSize: 14,
-        paddingTop: 4,
-        paddingLeft: 5
+      flexDirection: 'row',
+      alignItems: 'flex-end'
     },
     styleThank3: {
-        fontFamily: Fonts.ubuntuBoldItalic,
-        color: '#FF8700',
-        fontSize: 19,
-        paddingLeft: 5
+      marginLeft: 3,
+      fontSize: 20,
+      color: '#ff8b03',
+      fontFamily: Fonts.ubuntuBoldItalic
+    },
+    styleThanks1: {
+      fontFamily: Fonts.lobsterRegular,
+      color: '#fff',
+      fontSize: 48,
+      lineHeight: 48
+    },
+    styleThanks2: {
+      fontSize: 16,
+      color: '#fff',
+      fontFamily: Fonts.ubuntuLight,
     },
     styleCon: {
         width: window.width,
@@ -87,13 +76,15 @@ export const styles = StyleSheet.create({
         top: 28,
         left: window.width / 12 - 32,
         marginRight: 30,
-        color: '#FFC400'
+        color: '#FFC400',
+        textShadowOffset: { width: 3, height: 2 }
     },
     styleText2: {
         fontSize: 47,
         fontFamily: Fonts.lobsterRegular,
         paddingLeft: 18,
-        color: '#FFC400'
+        color: '#FFC400',
+        textShadowOffset: { width: 3, height: 2 }
     },
     styleTextCoin2: {
         width: window.width / 2 + 60,
@@ -104,6 +95,7 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         top: window.width / 9 + 10,
         left: window.width / 9,
+        textShadowOffset: { width: 3, height: 2 }
     },
     imageSvg: {
         width: window.width / 5 + 20,
@@ -115,21 +107,24 @@ export const styles = StyleSheet.create({
     styleText3: {
         fontSize: 49,
         fontFamily: Fonts.ubuntuBoldItalic,
-        color: '#FFC400'
+        color: '#FFC400',
+        textShadowOffset: { width: 3, height: 2 }
     },
     styleText4: {
         fontSize: 18,
         fontFamily: Fonts.ubuntuBoldItalic,
         position: 'absolute',
         top: window.width / 7 - 2,
-        color: '#FFC400'
+        color: '#FFC400',
+        textShadowOffset: { width: 3, height: 2 }
     },
     styleText5: {
         fontSize: 18,
         fontFamily: Fonts.ubuntuBoldItalic,
         marginLeft: 20,
         marginTop: 10,
-        color: '#FFC400'
+        color: '#FFC400',
+        textShadowOffset: { width: 3, height: 2 }
     },
     styleTextCoin4: {
         alignItems: 'center',

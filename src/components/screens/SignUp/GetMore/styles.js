@@ -102,7 +102,9 @@ export const styles = StyleSheet.create({
   titleShare: {
     fontSize: 40,
     color: '#fff',
-    fontFamily: Fonts.yellowtail
+    fontFamily: Fonts.yellowtail,
+    textShadowColor: '#671102',
+    textShadowOffset: { width: 1, height: 4 }
   },
   contentShare: {
     marginLeft: 30,
@@ -124,13 +126,17 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     color: '#FFE000',
     fontFamily: Fonts.ubuntuBoldItalic,
-    lineHeight: 40
+    lineHeight: 42,
+    textShadowColor: '#671102',
+    textShadowOffset: { width: 3, height: 4 }
   },
   dealCoins: {
     fontSize: 20,
     color: '#FFE000',
     fontFamily: Fonts.ubuntuBoldItalic,
-    lineHeight: 20
+    lineHeight: 22,
+    textShadowColor: '#671102',
+    textShadowOffset: { width: 3, height: 2 }
   },
   textGet: {
     fontSize: 36,
